@@ -5,58 +5,58 @@ export const Types = {
 const inititalState = {
   columns: {
       "c01": {
-          "icone": "📝",
-          "nome": "To Do",
-          "cor": 0,
-          "tarefas": [{
+          "icon": "📝",
+          "name": "To Do",
+          "color": 0,
+          "tasks": [{
                   "id": "t01",
-                  "nome": "Documentar padrões mobile",
+                  "name": "Documentar padrões mobile",
                   "tags": ["To Do", "Tag 1", "Tag 2"]
               },
               {
                   "id": "t02",
-                  "nome": "Ajustes fluxo de compra",
+                  "name": "Ajustes fluxo de compra",
                   "tags": ["To Do"]
               },
               {
                   "id": "t03",
-                  "nome": "Banners da home",
+                  "name": "Banners da home",
                   "tags": ["To Do"]
               },
               {
                   "id": "t04",
-                  "nome": "Template de e-mail marketing",
+                  "name": "Template de e-mail marketing",
                   "tags": ["To Do"]
               }
           ]
       },
       "c02": {
-          "icone": "💻",
-          "nome": "In Progress",
-          "cor": 1,
-          "tarefas": [{
+          "icon": "💻",
+          "name": "In Progress",
+          "color": 1,
+          "tasks": [{
               "id": "t05",
-              "nome": "Wireframe das telas",
+              "name": "Wireframe das telas",
               "tags": ["Desenvolvimento"]
           }]
       },
       "c03": {
-          "icone": "🚀",
-          "nome": "Done",
-          "cor": 2,
-          "tarefas": [{
+          "icon": "🚀",
+          "name": "Done",
+          "color": 2,
+          "tasks": [{
                   "id": "t06",
-                  "nome": "Implementação do blog",
+                  "name": "Implementação do blog",
                   "tags": []
               },
               {
                   "id": "t07",
-                  "nome": "Análise de métricas",
+                  "name": "Análise de métricas",
                   "tags": []
               },
               {
                   "id": "t08",
-                  "nome": "UX Review",
+                  "name": "UX Review",
                   "tags": []
               }
           ]
