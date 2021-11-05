@@ -6,6 +6,11 @@ import { setColumns } from '../../state/reducers/columns'
 import { Droppable } from 'react-beautiful-dnd';
 import { Task } from "../Tasks";
 
+import { 
+  Container,
+  ColumnArea
+} from './styles';
+
 export function Column(props){
   const dispatch = useDispatch();
 
@@ -59,6 +64,11 @@ export function Column(props){
     if(e.key === 'Enter'){
       saveNewTask(e);
     }
+
+    if(e.key === 'Escape'){
+      e.target.value = "";
+      setNewTask(false);
+    }
   }
 
   const taskDelete = (e, index) => {
@@ -101,20 +111,20 @@ export function Column(props){
   }
 
   return (
-    <div>
+    <Container>
       <Droppable droppableId={code} index={index}>
         {(provided, snapshot) => {
           return (
-            <div
+            <ColumnArea
               {...provided.droppableProps}
               ref={provided.innerRef}
               style={{
                 opacity: snapshot.isDraggingOver ? 0.8 : 1,
               }}
             >
-              <div>
+              <div className="taskTitle">
                 <div>{icon}</div>
-                {name}
+                <div>{name}</div>
               </div>
               {tasks.map((task, index) => {
                 return (
@@ -133,7 +143,7 @@ export function Column(props){
               })}
 
               {newTask ? (
-                <div>
+                <div className="newTaskWrapper">
                   <input 
                     autoFocus
                     onKeyDown={keyboardControll}
@@ -142,7 +152,7 @@ export function Column(props){
                 </div>
               ): null}
               {provided.placeholder}
-            </div>
+            </ColumnArea>
           )
         }}
       </Droppable>
@@ -152,8 +162,8 @@ export function Column(props){
           setNewTask(true);
         }}
       >
-        <div /> Add a new task
+        <div /> + Task
       </span>
-    </div>
+    </Container>
   )
 }

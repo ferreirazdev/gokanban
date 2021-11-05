@@ -6,17 +6,14 @@ import { Column } from "../../components/Column";
 import { DragDropContext } from "react-beautiful-dnd";
 import { setColumns } from "../../state/reducers/columns";
 
+import {
+  Container
+} from './styles'
+
 export function Home(){
   const dispatch = useDispatch();
 
   const [newColumn, setNewColumn] = useState(false);
-
-  const [selIcone, setSelIcone] = useState({
-    active: false,
-    column: undefined,
-  });
-
-  const [posPick, setPosPick] = useState(0);
 
   const { columns } = useSelector((state) => state.columns)
 
@@ -113,7 +110,7 @@ export function Home(){
   console.log(columns)
 
   return (
-    <div>
+    <Container>
       
       <DragDropContext onDragEnd={(theReturn) => dropTask(theReturn)}>
         {Object.entries(columns).map((column, index) => {
@@ -128,27 +125,29 @@ export function Home(){
         })}
       </DragDropContext>
 
-      {newColumn ? (
-          <div cor={`${Object.getOwnPropertyNames(columns).length % 4}`}>
+      <div className="newColumnWrapper">
+        {newColumn ? (
+          <div className="newColumn">
             <div>📑</div>
             <input
               autoFocus
               onKeyDown={keyboardControll}
               onBlur={saveNewColumn}
-              placeholder="Nova Coluna..."
+              placeholder="New Column..."
             />
           </div>
         ) : null}
 
-        <div>
+        <div className="addNewColumnWrapper">
           <span 
             role="textbox"
             onClick={() => setNewColumn(true)}
-            placeholder="Adicionar outra lista"
+            placeholder="Add new Column"
           >
-            <div /> Add a new column
+            <div /> + Column
           </span>
         </div>
-    </div>
+      </div>
+    </Container>
   )
 }

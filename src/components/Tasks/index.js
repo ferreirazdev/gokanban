@@ -1,5 +1,9 @@
 import { Draggable } from 'react-beautiful-dnd';
-import { Tags } from './styles'
+import TrashSvg from '../../assets/trash.svg' 
+import { 
+  Container, 
+  Tags 
+} from './styles'
 
 export function Task(props){
   const { index, task, deleteTask, selTags} = props;
@@ -8,22 +12,24 @@ export function Task(props){
     <Draggable draggableId={task.id} index={index}>
       {(provided) => {
         return (
-          <div
+          <Container
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
           >
-            <p>{task.name}</p>
-            <button 
-              title="delete"
-              onClick={deleteTask}
-            />
-            <Tags
-              tags={task.tags}
-              onChange={(newTags) => selTags(newTags)}
-              placeholder="New Tags..."
-            />
-          </div>
+            <div className="taskInfoWrapper">
+              <p>{task.name}</p>
+              <img src={TrashSvg} width={14} onClick={deleteTask} alt="logo"/>
+            </div>
+            <div className="tagsWrapper">
+              <Tags
+                tags={task.tags}
+                onChange={(newTags) => selTags(newTags)}
+                placeholder="+ Tags" 
+              />
+            </div>
+            
+          </Container>
         )
       }}
     </Draggable>

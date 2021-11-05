@@ -10,23 +10,13 @@ const inititalState = {
           "color": 0,
           "tasks": [{
                   "id": "t01",
-                  "name": "Documentar padrões mobile",
-                  "tags": ["To Do", "Tag 1", "Tag 2"]
+                  "name": "Make deploy",
+                  "tags": ["To Do", "Development"]
               },
               {
-                  "id": "t02",
-                  "name": "Ajustes fluxo de compra",
-                  "tags": ["To Do"]
-              },
-              {
-                  "id": "t03",
-                  "name": "Banners da home",
-                  "tags": ["To Do"]
-              },
-              {
-                  "id": "t04",
-                  "name": "Template de e-mail marketing",
-                  "tags": ["To Do"]
+                "id": "t06",
+                "name": "API Documentation",
+                "tags": ["To do"]
               }
           ]
       },
@@ -36,30 +26,15 @@ const inititalState = {
           "color": 1,
           "tasks": [{
               "id": "t05",
-              "name": "Wireframe das telas",
-              "tags": ["Desenvolvimento"]
+              "name": "New UI for eCommerce",
+              "tags": ["Design"]
           }]
       },
       "c03": {
           "icon": "🚀",
           "name": "Done",
           "color": 2,
-          "tasks": [{
-                  "id": "t06",
-                  "name": "Implementação do blog",
-                  "tags": []
-              },
-              {
-                  "id": "t07",
-                  "name": "Análise de métricas",
-                  "tags": []
-              },
-              {
-                  "id": "t08",
-                  "name": "UX Review",
-                  "tags": []
-              }
-          ]
+          "tasks": []
       }
   }
 }
