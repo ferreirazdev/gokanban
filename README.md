@@ -1,6 +1,6 @@
 # goKanban
 
-Você pode visualizar aqui: [https:///](https://)
+You can see more: [https://gokanban-88202.web.app/](https://gokanban-88202.web.app/)
 
 ```bash
 # Clone o Repositório
@@ -16,7 +16,7 @@ git@github.com:ferreirazdev/goKanban
 
 ```bash
 # Acesse a pasta do projeto
-cd gamestore
+cd goKanban
 ```
 
 ```bash
@@ -29,11 +29,16 @@ yarn
 # Execute o projeto
 yarn start
 ```
+```bash
+# Faça login
+Email: teste@gmail.com
+Senha: 123123
+```
 
 ```bash
 # Execute os testes com Cypress
 yarn run cypress open
 
 # Execute os testes com Cypress
-Clique em no teste: columns_tasks_tags.js
+Clique no teste: columns_tasks_tags.js
 ```
