@@ -32,9 +32,7 @@ export const Container = styled.div`
       color: #212529;
     }
 
-    @media(max-width: 760px) {
-      
-    }
+    
   }
 
   .addNewColumnWrapper {
