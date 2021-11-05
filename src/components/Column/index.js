@@ -158,11 +158,14 @@ export function Column(props){
       </Droppable>
       
       <span
+        className="handleNewTask"
         onClick={() => {
           setNewTask(true);
         }}
       >
-        <div /> + Task
+        <div>
+          + Task
+        </div>
       </span>
     </Container>
   )
